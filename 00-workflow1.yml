@@ -1,0 +1,26 @@
+name: "Push Event - Lior The Queen"
+
+on:
+  push:
+    branches: 
+      - main
+      - master
+
+jobs:
+  lior-the-queen:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Show push information
+        run: |
+          echo "👑👑👑👑👑👑👑👑👑👑👑👑👑👑"
+          echo "     LIOR THE QUEEN     "
+          echo "👑👑👑👑👑👑👑👑👑👑👑👑👑👑"
+          echo ""
+          echo "Push was made by: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit SHA: ${{ github.sha }}"
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+          echo ""
+          echo "✨ All hail Queen Lior! ✨"
