@@ -79,5 +79,11 @@ def info():
         'description': 'A simple Flask application with Docker support'
     })
 
+@app.get("ai")
+def ai():
+    return jsonify({
+        "invoke_ai": "predict next buy"
+    })
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=False)
